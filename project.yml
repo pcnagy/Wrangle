@@ -1,0 +1,28 @@
+name: Wrangle
+options:
+  bundleIdPrefix: com.wrangle
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "15.0"
+
+targets:
+  Wrangle:
+    type: application
+    platform: macOS
+    sources:
+      - Wrangle
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.wrangle.app
+        PRODUCT_NAME: Wrangle
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        INFOPLIST_FILE: Wrangle/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Wrangle/Wrangle.entitlements
+        SWIFT_VERSION: "5.9"
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+        GENERATE_INFOPLIST_FILE: NO
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_HARDENED_RUNTIME: YES
+    entitlements:
+      path: Wrangle/Wrangle.entitlements
